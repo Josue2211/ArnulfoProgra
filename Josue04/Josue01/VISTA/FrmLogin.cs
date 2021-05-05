@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Josue01.DOMINIO;
+using Josue01.NEGOCIO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,20 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Josue01.DOMINIO;
-using Josue01.NEGOCIO;
-using Josue01.VISTA;
 
-namespace Josue01
+namespace Josue01.VISTA
 {
-    public partial class form : Form
+    public partial class FrmLogin : Form
     {
-        public form()
+        public FrmLogin()
         {
             InitializeComponent();
         }
 
-        private void btningresar_Click(object sender, EventArgs e)
+        private void FrmLogin_Load(object sender, EventArgs e)
         {
             Login log = new Login();
 
@@ -29,7 +28,7 @@ namespace Josue01
 
             ClsLogin clsL = new ClsLogin();
 
-            int variabledeevaluacion= clsL.acceso(log);
+            int variabledeevaluacion = clsL.acceso(log);
 
             if (variabledeevaluacion == 1)
             {
@@ -46,17 +45,11 @@ namespace Josue01
 
 
 
-
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void form_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

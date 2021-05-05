@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Josue01.DAO
@@ -11,7 +9,8 @@ namespace Josue01.DAO
     class ClsDUserList
     {
 
-        public List<UserList> cargarDatosUserList(){
+        public List<UserList> cargarDatosUserList()
+        {
             List<UserList> Lista;
 
             using (programacionEntities db = new programacionEntities())
@@ -73,7 +72,8 @@ namespace Josue01.DAO
             }
         }
 
-        public void DeleteUser(int ID){
+        public void DeleteUser(int ID)
+        {
 
             try
             {
@@ -95,7 +95,8 @@ namespace Josue01.DAO
 
         }
 
-        public void UpdateUser(UserList user){
+        public void UpdateUser(UserList user)
+        {
 
             try
             {
@@ -110,7 +111,7 @@ namespace Josue01.DAO
                     userList.Edad = user.Edad;
                     userList.Pass = user.Pass;
                     db.SaveChanges();
- 
+
                 }
             }
             catch (Exception EX)

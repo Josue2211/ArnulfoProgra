@@ -1,9 +1,6 @@
 ﻿
 using Josue01.VISTA;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Josue01
@@ -18,7 +15,7 @@ namespace Josue01
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmUsuarios());
+            Application.Run(new FrmLogin());
         }
     }
 }

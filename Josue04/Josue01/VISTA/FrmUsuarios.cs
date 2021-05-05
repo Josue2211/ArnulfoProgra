@@ -2,12 +2,6 @@
 using Josue01.MODEL;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Josue01.VISTA
@@ -32,10 +26,11 @@ namespace Josue01.VISTA
 
         }
 
-        void Carga () {
+        void Carga()
+        {
             dtgListaUsuarios.Rows.Clear();
             ClsDUserList clsDUserList = new ClsDUserList();
-            List<UserList>  Lista = clsDUserList.cargarDatosUserList();
+            List<UserList> Lista = clsDUserList.cargarDatosUserList();
 
 
             foreach (var iteraction in Lista)
@@ -47,15 +42,15 @@ namespace Josue01.VISTA
         private void button1_Click(object sender, EventArgs e)
         {
             if (txtID.Text.Equals(""))
-            { 
-            ClsDUserList clsDUserList = new ClsDUserList();
-            //clsDUserList.SaveDatosUser(txtNombre.Text,txtApellido.Text,Convert.ToInt32(txtEdad.Text),txtPass.Text);
-            UserList userList = new UserList();
-            userList.NombreUsuario = txtNombre.Text;
-            userList.Apellido = txtApellido.Text;
-            userList.Edad = Convert.ToInt32(txtEdad.Text);
-            userList.Pass = txtPass.Text;
-            clsDUserList.SaveDatosUser(userList);
+            {
+                ClsDUserList clsDUserList = new ClsDUserList();
+                //clsDUserList.SaveDatosUser(txtNombre.Text,txtApellido.Text,Convert.ToInt32(txtEdad.Text),txtPass.Text);
+                UserList userList = new UserList();
+                userList.NombreUsuario = txtNombre.Text;
+                userList.Apellido = txtApellido.Text;
+                userList.Edad = Convert.ToInt32(txtEdad.Text);
+                userList.Pass = txtPass.Text;
+                clsDUserList.SaveDatosUser(userList);
             }
             else
             {
@@ -88,7 +83,7 @@ namespace Josue01.VISTA
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
             Carga();
             Clear();
 
@@ -112,6 +107,11 @@ namespace Josue01.VISTA
         }
 
         private void FrmUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgListaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

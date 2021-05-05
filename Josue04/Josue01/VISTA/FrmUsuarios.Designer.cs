@@ -170,6 +170,7 @@ namespace Josue01.VISTA
             this.dtgListaUsuarios.Size = new System.Drawing.Size(467, 150);
             this.dtgListaUsuarios.TabIndex = 13;
             this.dtgListaUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgListaUsuarios_CellClick);
+            this.dtgListaUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgListaUsuarios_CellContentClick);
             // 
             // Column5
             // 
